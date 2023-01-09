@@ -9,6 +9,7 @@
 import React from 'react';
 import { Dimensions, SafeAreaView, StatusBar, StyleSheet, View } from 'react-native';
 import Dropdown from './src/dropdown';
+import TestScreen from './src/screens/Test';
 
 const { height, width } = Dimensions.get('window');
 
@@ -29,13 +30,14 @@ function App() {
     <SafeAreaView>
       <StatusBar />
       <View style={styles.container}>
-        <Dropdown
+        {/* <Dropdown
           label="Dropdown"
           placeholder="Select or Enter"
           onChangeText={(text) => console.log(text)}
           options={rawData}
           value={rawData[0].value}
-        />
+        /> */}
+        <TestScreen />
       </View>
     </SafeAreaView>
   );
@@ -45,8 +47,8 @@ const styles = StyleSheet.create({
   container: {
     height,
     width,
-    justifyContent: 'center',
-    alignItems: 'center',
+    // justifyContent: 'center',
+    // alignItems: 'center',
     paddingHorizontal: 16,
   },
 });
